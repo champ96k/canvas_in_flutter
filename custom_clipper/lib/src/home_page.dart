@@ -2,6 +2,7 @@ import 'package:custom_clipper/src/clipper/my_clipper.dart';
 import 'package:custom_clipper/src/widget/primary_button.dart';
 import 'package:flutter/material.dart';
 
+import 'cut_corners/my_cut_corners_clipper.dart';
 import 'quadratic_bezier/my_quadratic_bezier.dart';
 
 class HomePage extends StatelessWidget {
@@ -40,8 +41,14 @@ class HomePage extends StatelessWidget {
             ),
             const SizedBox(height: 26.0),
             PrimaryButton(
-              title: "Custom Clipper",
-              onTap: () {},
+              title: "Cut Corners",
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const MyCutCorners(),
+                  ),
+                );
+              },
             ),
           ],
         ),
